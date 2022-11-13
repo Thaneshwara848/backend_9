@@ -28,11 +28,19 @@ public class Demo2 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			try {
 			
-			ServletContext context=getServletContext();
-			String driver=context.getInitParameter("drivername");
-			System.out.println("MyDriver Name with Demo 2  :"+driver);
-			
-			Class.forName("driver");
+				ServletContext context=getServletContext();
+				String driver=context.getInitParameter("drivername");
+				String url=context.getInitParameter("url");
+				String username=context.getInitParameter("username");
+				String password=context.getInitParameter("password");
+				
+				
+				System.out.println("Driver name with Demo2   :"+driver);
+				System.out.println("URL   Name with Demo 2   :"+url);
+				System.out.println(" USERNAME  with Demo 2   :"+username);
+				System.out.println("PASSWORD  Name with Demo2   :"+password);
+				
+				
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

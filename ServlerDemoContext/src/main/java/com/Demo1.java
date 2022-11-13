@@ -21,7 +21,16 @@ public class Demo1 extends HttpServlet {
 			
 			ServletContext context=getServletContext();
 			String driver=context.getInitParameter("drivername");
-			System.out.println("MyDriver Name with Demo1  :"+driver);
+			String url=context.getInitParameter("url");
+			String username=context.getInitParameter("username");
+			String password=context.getInitParameter("password");
+			
+			
+			System.out.println("Driver name with Demo1  :"+driver);
+			System.out.println("URL   Name with Demo1  :"+url);
+			System.out.println(" USERNAME  with Demo1  :"+username);
+			System.out.println("PASSWORD  Name with Demo1  :"+password);
+
 			Class.forName("driver");
 			
 		} catch (Exception e) {
